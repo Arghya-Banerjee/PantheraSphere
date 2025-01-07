@@ -1,0 +1,136 @@
+﻿/* Background styling for the login page */
+body {
+    background: url('/img/bg/login_bg.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f5f5f5;
+}
+
+/* Styling the login page container */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    padding: 20px;
+}
+
+.login-box {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    padding: 40px; /* Increased padding */
+    border-radius: 12px; /* Subtle rounded corners for modern look */
+    max-width: 450px; /* Slightly larger box */
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Enhanced shadow for modern effect */
+}
+
+.login-header h1 {
+    color: #ffcc00; /* Tiger-themed yellow */
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #f5f5f5;
+    font-size: 1rem;
+    margin-bottom: 50px;
+}
+
+/* Adjusting form input and button spacing */
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    font-size: 1rem;
+    color: #f5f5f5;
+    margin-bottom: 8px; /* Space between label and input */
+    text-align: left; /* Left-align labels */
+    margin-left: 5%; /* Align with input box */
+}
+
+/* Input box styling */
+.login-form .form-control {
+    width: 90%; /* Reduced width */
+    margin: 0 auto; /* Center align */
+    padding: 10px;
+    border-radius: 8px; /* Softer corners */
+    background: #333;
+    border: 1px solid #444;
+    color: #f5f5f5;
+    transition: border-color 0.3s ease;
+}
+
+    .login-form .form-control:focus {
+        border-color: #ffcc00; /* Highlight on focus */
+        outline: none;
+    }
+
+/* Button styling */
+.login-form .btn {
+    width: 90%; /* Match input width */
+    margin: 20px auto 0; /* Add space above and center align */
+    padding: 12px; /* Slightly taller button for better interaction */
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    border-radius: 8px;
+    background-color: #ffcc00;
+    color: #000;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .login-form .btn:hover {
+        background-color: #e6b800; /* Subtle darker hover effect */
+        transform: scale(1.05); /* Modern hover animation */
+    }
+
+/* Link styling */
+.login-form a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    .login-form a:hover {
+        color: #e6b800;
+        text-decoration: underline;
+    }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .login-box {
+        padding: 30px;
+        max-width: 90%; /* Adjust size for smaller screens */
+    }
+
+    .login-form .form-control,
+    .login-form .btn {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .login-form label {
+        margin-left: 0; /* Adjust for full-width alignment */
+    }
+}
+
+.login-box a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .login-box a:hover {
+        text-decoration: underline;
+        color: #e6b800;
+    }
+
+.text-danger {
+    color: #ff4444; /* Bright red for errors */
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
