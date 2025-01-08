@@ -113,3 +113,10 @@
         margin-left: 0; /* Adjust for full-width alignment */
     }
 }
+
+.error-message {
+    display: none;
+    color: #ff6666;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}

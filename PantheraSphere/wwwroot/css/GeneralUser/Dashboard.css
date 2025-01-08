@@ -1,0 +1,57 @@
+﻿body {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.menu ul li {
+    margin-bottom: 15px;
+}
+
+.menu ul li a {
+display: block;
+text-align: center;
+padding: 15px;
+background-color: #ffcc00;
+color: #000;
+font-size: 1.2rem;
+text-decoration: none;
+border-radius: 8px;
+transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #252525;
+    transform: scale(1.05);
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    background: linear-gradient(145deg, #333, #252525);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7), -4px -4px 8px rgba(50, 50, 50, 0.2);
+    flex: 1;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+.stat-item:hover {
+    transform: scale(1.05);
+}
+
+.stat-item h3 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #ffcc00;
+}
+
+.stat-item p {
+    margin: 10px 0 0;
+    font-size: 1.1rem;
+    color: #f5f5f5;
+}

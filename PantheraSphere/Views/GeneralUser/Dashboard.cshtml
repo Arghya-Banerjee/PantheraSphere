@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_GeneralUser.cshtml";
+    ViewData["Title"] = "Dashboard";
+}
+
+<link rel="stylesheet" href="~/css/GeneralUser/Dashboard.css" />
+
+<h2>Welcome, @ViewBag.UserName!</h2>
+
+<div class="stats-row">
+    <div class="stat-item">
+        <h3>@ViewBag.UniqueTigers</h3>
+        <p>Unique Tigers Listed</p>
+    </div>
+    <div class="stat-item">
+        <h3>@ViewBag.ChecklistsSubmitted</h3>
+        <p>Checklists Submitted</p>
+    </div>
+    <div class="stat-item">
+        <h3>@ViewBag.UniqueLocations</h3>
+        <p>Unique Locations</p>
+    </div>
+</div>

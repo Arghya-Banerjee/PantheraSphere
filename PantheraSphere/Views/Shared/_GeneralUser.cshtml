@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - PantheraSphere</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/Generaluser.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png" alt="Logo">
+                <h1>PantheraSphere</h1>
+            </div>
+        </header>
+
+        <div class="dashboard-layout">
+            <aside class="menu">
+                <ul>
+                    <li><a href="/Dashboard">Dashboard</a></li>
+                    <li><a href="/TigerLogs">Tiger Logs</a></li>
+                    <li><a href="/ConservationReports">Conservation Reports</a></li>
+                    <li><a href="/SubmitSightings">Submit Sightings</a></li>
+                    <li><a href="/Profile">Profile</a></li>
+                    <li><a href="/Settings">Settings</a></li>
+                    <li><a href="/Account/Logout">Logout</a></li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 PantheraSphere. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

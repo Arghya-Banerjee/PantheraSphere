@@ -45,20 +45,18 @@
         errorDiv.textContent = '';
 
         // AJAX request to validate login
-        fetch('/Account/LoginValidate', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: formData.toString()
+            fetch('/Account/LoginValidate', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: formData.toString()
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                // Redirect to dashboard or home page
-                window.location.href = '/Home/Index';
+                window.location.href = data.redirectUrl; // Use redirectUrl from server
             } else {
-                // Display error message
                 errorDiv.style.display = 'block';
                 errorDiv.textContent = data.message;
             }
