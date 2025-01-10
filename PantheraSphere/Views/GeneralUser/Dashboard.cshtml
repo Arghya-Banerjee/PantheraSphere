@@ -1,23 +1,51 @@
 ﻿@{
     Layout = "~/Views/Shared/_GeneralUser.cshtml";
-    ViewData["Title"] = "Dashboard";
+    ViewData["Title"] = "User Dashboard";
 }
 
 <link rel="stylesheet" href="~/css/GeneralUser/Dashboard.css" />
 
-<h2>Welcome, @ViewBag.UserName!</h2>
+<div class="dashboard-main">
+    <div class="welcome-banner">
+        <h1>Welcome to PantheraSphere</h1>
+        <p>Your contribution to tiger conservation starts here!</p>
+    </div>
 
-<div class="stats-row">
-    <div class="stat-item">
-        <h3>@ViewBag.UniqueTigers</h3>
-        <p>Unique Tigers Listed</p>
+    <!-- Statistics Section -->
+    <div class="stats-section">
+        <div class="stat-item">
+            <div class="stat-heading">Checklists</div>
+            <div class="stat-number">24</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-heading">Regions</div>
+            <div class="stat-number">12</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-heading">Unique Tigers</div>
+            <div class="stat-number">8</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-heading">Total Tigers</div>
+            <div class="stat-number">15</div>
+        </div>
     </div>
-    <div class="stat-item">
-        <h3>@ViewBag.ChecklistsSubmitted</h3>
-        <p>Checklists Submitted</p>
+
+    <!-- Map Section -->
+    <div class="map-section">
+        <h2>Explore Sightings on Map</h2>
+        <div class="map-placeholder">
+            <p>Map loading...</p>
+        </div>
     </div>
-    <div class="stat-item">
-        <h3>@ViewBag.UniqueLocations</h3>
-        <p>Unique Locations</p>
+
+    <!-- Recent Checklists Section -->
+    <div class="recent-checklists-section">
+        <h2>Recent Checklists</h2>
+        <ul>
+            <li>Kanha National Park - 3 Tigers Spotted (Jan 9, 2025)</li>
+            <li>Jim Corbett National Park - 5 Tigers Spotted (Jan 8, 2025)</li>
+            <li>Sundarbans - 2 Tigers Spotted (Jan 7, 2025)</li>
+        </ul>
     </div>
 </div>

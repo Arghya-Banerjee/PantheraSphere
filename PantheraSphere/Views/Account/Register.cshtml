@@ -15,11 +15,12 @@
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username" required>
-                <div id="usernameError" class="error-message">Username is already taken.</div>
+                <div id="usernameError" class="error-message" style="display: none;"></div>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+                <div id="emailError" class="error-message" style="display: none;"></div>
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
@@ -32,7 +33,7 @@
             <div class="form-group">
                 <label for="confirmPassword">Confirm Password</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm your password" required>
-                <div id="passwordMatchError" class="error-message">Passwords do not match.</div>
+                <div id="passwordMatchError" class="error-message" style="display: none;">Passwords do not match.</div>
             </div>
             <div class="form-group text-center">
                 <button type="submit" id="submitButton" class="btn">Register</button>
@@ -50,11 +51,12 @@
 
         const formData = new URLSearchParams(new FormData(this)); // Serialize form data
         const usernameError = document.getElementById('usernameError');
+        const emailError = document.getElementById('emailError');
         const passwordMatchError = document.getElementById('passwordMatchError');
-        const submitButton = document.getElementById('submitButton');
 
-        // Clear errors
+        // Clear all error messages
         usernameError.style.display = 'none';
+        emailError.style.display = 'none';
         passwordMatchError.style.display = 'none';
 
         const password = document.getElementById('password').value;
@@ -82,8 +84,13 @@
                 window.location.href = data.redirectUrl;
             } else {
                 // Display error message
-                usernameError.style.display = 'block';
-                usernameError.textContent = data.message;
+                if (data.field === 'username') {
+                    usernameError.style.display = 'block';
+                    usernameError.textContent = data.message;
+                } else if (data.field === 'email') {
+                    emailError.style.display = 'block';
+                    emailError.textContent = data.message;
+                }
             }
         })
         .catch(error => {

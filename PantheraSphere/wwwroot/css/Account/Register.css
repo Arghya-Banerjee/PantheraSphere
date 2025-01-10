@@ -50,6 +50,7 @@
     margin-bottom: 8px; /* Space between label and input */
     text-align: left;
     margin-left: 5%; /* Align with input box */
+    width: 90%; /* Match width with inputs */
 }
 
 .register-form .form-control {
@@ -61,6 +62,8 @@
     border: 1px solid #444;
     color: #f5f5f5;
     transition: border-color 0.3s ease;
+    display: block; /* Ensure consistent block alignment */
+    box-sizing: border-box; /* Include padding and border in width */
 }
 
     .register-form .form-control:focus {
@@ -97,6 +100,17 @@
         text-decoration: underline;
     }
 
+/* Error message styling */
+.error-message {
+    color: #ff6666; /* Red for error messages */
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-left: 5%; /* Align with input fields */
+    width: 90%; /* Match the width of input fields */
+    text-align: left;
+    display: block;
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
     .register-box {
@@ -112,11 +126,9 @@
     .register-form label {
         margin-left: 0; /* Adjust for full-width alignment */
     }
-}
 
-.error-message {
-    display: none;
-    color: #ff6666;
-    font-size: 0.9rem;
-    margin-top: 5px;
+    .error-message {
+        margin-left: 0; /* Adjust alignment for full-width layout */
+        width: 100%; /* Match input width on small screens */
+    }
 }

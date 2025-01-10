@@ -9,6 +9,12 @@ namespace PantheraSphere.Controllers
         [Route("Dashboard")]
         public IActionResult Dashboard()
         {
+            UserSec sessionDetails = HttpContext.Session.GetObjectFromJson<UserSec>("SessionDetails");
+            if (sessionDetails == null || sessionDetails.RoleID != 4)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             ViewBag.UniqueTigers = 10;
             ViewBag.ChecklistsSubmitted = 7;
             ViewBag.UniqueLocations = 13;

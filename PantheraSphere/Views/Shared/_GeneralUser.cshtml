@@ -6,25 +6,29 @@
     <title>@ViewData["Title"] - PantheraSphere</title>
     <link rel="stylesheet" href="~/css/site.css">
     <link rel="stylesheet" href="~/css/Generaluser.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <header class="navbar">
-            <div class="navbar-brand">
-                <img src="/logo.png" alt="Logo">
-                <h1>PantheraSphere</h1>
-            </div>
-        </header>
-
         <div class="dashboard-layout">
             <aside class="menu">
-                <ul>
+                <!-- Logo and Site Name at the top, attached to the first menu set -->
+                <div class="menu-header">
+                    <img src="/logo.png" alt="Logo" class="logo">
+                    <h1 class="site-title">PantheraSphere</h1>
+                </div>
+
+                <ul class="menu-items">
                     <li><a href="/Dashboard">Dashboard</a></li>
                     <li><a href="/TigerLogs">Tiger Logs</a></li>
-                    <li><a href="/ConservationReports">Conservation Reports</a></li>
-                    <li><a href="/SubmitSightings">Submit Sightings</a></li>
+                    <li><a href="/ConservationReports">Reports</a></li>
+                    <li><a href="/SubmitSightings">Submit Checklist</a></li>
                     <li><a href="/Profile">Profile</a></li>
+                    <li><a href="/Report">Report</a></li>
+                </ul>
+
+                <!-- Bottom Links -->
+                <ul class="menu-bottom">
                     <li><a href="/Settings">Settings</a></li>
                     <li><a href="/Account/Logout">Logout</a></li>
                 </ul>

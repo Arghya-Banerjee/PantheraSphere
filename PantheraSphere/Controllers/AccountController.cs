@@ -86,12 +86,17 @@ namespace PantheraSphere.Controllers
             RegisterModel regDetails = DBOperations<RegisterModel>.GetSpecific(new RegisterModel
             {
                 OpMode = 0,
-                UserName = username
+                UserName = username,
+                Email = email
             }, Constant.usp_Register);
 
             if(regDetails.UserName == username)
             {
-                return Json(new { success = false, message = "User already exists"});
+                return Json(new { success = false, field = "username", message = "Username already exists"});
+            }
+            else if(regDetails.Email == email)
+            {
+                return Json(new { success = false, field = "email", message = "Email already exists" });
             }
             else
             {
